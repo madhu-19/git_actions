@@ -1,9 +1,10 @@
 import boto3
+
 import json
 
 s3_client = boto3.client('s3')
 
-  def lambda_handler(event, context):
+def lambda_handler(event, context):
     print(str(event))
     bucket = event['detail']['requestParameters']['bucketName']
     print(bucket)
